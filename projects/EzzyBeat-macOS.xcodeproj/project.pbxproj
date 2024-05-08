@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -25,6 +25,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		225A522B2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
+		225A522C2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
+		225A522D2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
+		225A522E2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
+		225A522F2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
+		225A52302BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
+		225A52312BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
+		225A52322BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
+		225A52332BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
+		225A52342BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */; };
 		4F03A58C20A4621100EBDFFB /* IGraphicsNanoVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F03A55020A4621000EBDFFB /* IGraphicsNanoVG.h */; };
 		4F03A5AA20A4621100EBDFFB /* IGraphicsLiveEdit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F03A55620A4621000EBDFFB /* IGraphicsLiveEdit.h */; };
 		4F03A5AB20A4621100EBDFFB /* IGraphics_include_in_plug_hdr.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F03A55720A4621000EBDFFB /* IGraphics_include_in_plug_hdr.h */; };
@@ -418,6 +428,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		225A52282BEB990600A809B8 /* AudioFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioFetcher.h; sourceTree = "<group>"; };
+		225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioFetcher.cpp; sourceTree = "<group>"; };
 		4F03A55020A4621000EBDFFB /* IGraphicsNanoVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGraphicsNanoVG.h; sourceTree = "<group>"; };
 		4F03A55420A4621000EBDFFB /* IGraphicsNanoVG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IGraphicsNanoVG.cpp; sourceTree = "<group>"; };
 		4F03A55620A4621000EBDFFB /* IGraphicsLiveEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsLiveEdit.h; path = ../../../IGraphics/IGraphicsLiveEdit.h; sourceTree = "<group>"; };
@@ -858,6 +870,8 @@
 		089C166AFE841209C02AAC07 /* IPlugExample */ = {
 			isa = PBXGroup;
 			children = (
+				225A52292BEB9A2D00A809B8 /* AudioFetcher.cpp */,
+				225A52282BEB990600A809B8 /* AudioFetcher.h */,
 				52FBBED30D0CF143001C8B8A /* config.h */,
 				4F3862EE2014BBEC0009F402 /* EzzyBeat.h */,
 				4F3862ED2014BBEC0009F402 /* EzzyBeat.cpp */,
@@ -2234,6 +2248,7 @@
 				4F8C10E120BA2796006320CD /* IGraphicsEditorDelegate.cpp in Sources */,
 				4F6369DE20A464BB0022C370 /* IGraphicsNanoVG_src.m in Sources */,
 				4F8D9707209EF5AC006E2A11 /* EzzyBeat.cpp in Sources */,
+				225A522C2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4F78D9BB13B63BA50032E0F3 /* IPlugAPIBase.cpp in Sources */,
 				4FB1F59020E4B010004157C8 /* IGraphicsMac_view.mm in Sources */,
 				4F993F7223055C96000313AF /* IPlugProcessor.cpp in Sources */,
@@ -2247,6 +2262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225A52312BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4F78BE3222E7429B00AD537E /* IPlugAUv3Appex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2273,6 +2289,7 @@
 				4F5F344420C0226200487201 /* IPlugPaths.mm in Sources */,
 				4F35DEB0207E5C5A00867D8F /* IPlugPluginBase.cpp in Sources */,
 				4F78D95C13B63BA50032E0F3 /* IPlugParameter.cpp in Sources */,
+				225A522E2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4FB1F58C20E4B006004157C8 /* IGraphicsMac.mm in Sources */,
 				4F3862F22014BBEC0009F402 /* EzzyBeat.cpp in Sources */,
 			);
@@ -2314,6 +2331,7 @@
 				4F3EE1E1231438D000004786 /* IPlugPluginBase.cpp in Sources */,
 				4F3EE1E2231438D000004786 /* IGraphicsEditorDelegate.cpp in Sources */,
 				4F3EE1E3231438D000004786 /* swell-gdi.mm in Sources */,
+				225A52342BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4F3EE1E4231438D000004786 /* IPlugParameter.cpp in Sources */,
 				4F3EE1E5231438D000004786 /* IPlugTimer.cpp in Sources */,
 			);
@@ -2343,6 +2361,7 @@
 				4F78BE2622E7406D00AD537E /* IPlugAPIBase.cpp in Sources */,
 				4F78BE2822E7406D00AD537E /* IPlugParameter.cpp in Sources */,
 				4F78BE2922E7406D00AD537E /* IPlugTimer.cpp in Sources */,
+				225A52332BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4F78BE2A22E7406D00AD537E /* IPlugPaths.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2393,6 +2412,7 @@
 				4F815990205D51F000393585 /* vstcomponent.cpp in Sources */,
 				4F815981205D50EB00393585 /* fstreamer.cpp in Sources */,
 				4F815996205D51F000393585 /* vstrepresentation.cpp in Sources */,
+				225A522D2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4F815985205D50EB00393585 /* fcondition.cpp in Sources */,
 				4F9A82F9213DE80400BE63A4 /* IPopupMenuControl.cpp in Sources */,
 				4F8C10E220BA2796006320CD /* IGraphicsEditorDelegate.cpp in Sources */,
@@ -2427,6 +2447,7 @@
 				4FB600261567CB0A0020189A /* AAX_Exports.cpp in Sources */,
 				4F6FD2B522675B6300FC59E6 /* IGraphicsCoreText.mm in Sources */,
 				4FB600281567CB0A0020189A /* IPlugAAX_Describe.cpp in Sources */,
+				225A522F2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4FB1F58D20E4B007004157C8 /* IGraphicsMac.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2439,6 +2460,7 @@
 				4FB1F58F20E4B009004157C8 /* IGraphicsMac.mm in Sources */,
 				4F6369F120A466470022C370 /* IControl.cpp in Sources */,
 				4F6FD2B722675B6300FC59E6 /* IGraphicsCoreText.mm in Sources */,
+				225A52322BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4F8C10E620BA2796006320CD /* IGraphicsEditorDelegate.cpp in Sources */,
 				4FC3EFF92086CE5700BD11FA /* parameterchanges.cpp in Sources */,
 				4FC3EFCE2086C35D00BD11FA /* IPlugPluginBase.cpp in Sources */,
@@ -2489,6 +2511,7 @@
 				4F35DEAD207E5C5A00867D8F /* IPlugPluginBase.cpp in Sources */,
 				4F8C10E020BA2796006320CD /* IGraphicsEditorDelegate.cpp in Sources */,
 				4FF0A83221BE708700B2C9D1 /* swell-gdi.mm in Sources */,
+				225A522B2BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4F78D91813B63BA50032E0F3 /* IPlugParameter.cpp in Sources */,
 				4FDAC0EA207D76C600299363 /* IPlugTimer.cpp in Sources */,
 			);
@@ -2525,6 +2548,7 @@
 				4FFBB92220863B0E00DDD0E7 /* IPlugVST3_Processor.cpp in Sources */,
 				4F993F7623055C98000313AF /* IPlugProcessor.cpp in Sources */,
 				4FFBB92320863B0E00DDD0E7 /* conststringtable.cpp in Sources */,
+				225A52302BEB9A2D00A809B8 /* AudioFetcher.cpp in Sources */,
 				4FFBB92420863B0E00DDD0E7 /* vstaudioeffect.cpp in Sources */,
 				4FFBB92520863B0E00DDD0E7 /* vstsinglecomponenteffect.cpp in Sources */,
 				4FFBB92620863B0E00DDD0E7 /* updatehandler.cpp in Sources */,
@@ -2826,7 +2850,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "../resources/EzzyBeat-macOS-AUv3-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2863,7 +2891,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "../resources/EzzyBeat-macOS-AUv3-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -2900,7 +2932,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = "../resources/EzzyBeat-macOS-AUv3-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -3010,7 +3046,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/EzzyBeat-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
 					"$(inherited)",
@@ -3036,7 +3075,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/EzzyBeat-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
 					"$(inherited)",
@@ -3062,7 +3104,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/EzzyBeat-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
 					"$(inherited)",
@@ -3110,7 +3155,10 @@
 				GENERATE_PKGINFO_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/EzzyBeat-macOS-AUv3Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -3168,7 +3216,10 @@
 				GENERATE_PKGINFO_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/EzzyBeat-macOS-AUv3Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -3226,7 +3277,10 @@
 				GENERATE_PKGINFO_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../resources/EzzyBeat-macOS-AUv3Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -3655,7 +3709,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "../resources/EzzyBeat-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
 					"$(inherited)",
@@ -3680,7 +3737,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "../resources/EzzyBeat-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
 					"$(inherited)",
@@ -3705,7 +3765,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "../resources/EzzyBeat-macOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(APP_FRAMEWORKS)",
 					"$(inherited)",

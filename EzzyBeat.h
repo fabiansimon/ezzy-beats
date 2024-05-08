@@ -19,6 +19,7 @@ public:
   EzzyBeat(const InstanceInfo& info);
 
 #if IPLUG_DSP // http://bit.ly/2S64BDd
-  void ProcessBlock(sample** inputs, sample** outputs, int nFrames) override;
+    void ProcessBlock(sample** inputs, sample** outputs, int nFrames) override;
+    void CreateUI(IGraphics* pGraphics);
 #endif
 };
