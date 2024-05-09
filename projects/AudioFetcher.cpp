@@ -6,7 +6,10 @@
 //
 
 #include "AudioFetcher.h"
-//#include <curl/curl.h>
+
+
+static std::string COMMAND_BASE = "youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o \"~/Desktop/%(title)s.%(ext)s\" ";
+
 
 AudioFetcher::AudioFetcher()
 {
@@ -33,43 +36,34 @@ static void CleanUrl(std::string& rawUrl)
     rawUrl = rawUrl;
 }
 
-void AudioFetcher::FetchFromUrl(std::string& url)
+
+static bool YoutubeDLCheck() {
+    return system("youtube-dl --version") == 0;
+}
+
+
+void AudioFetcher::FetchFromUrl(std::string& url, const std::string& outputPath)
 {
     auto errMessage = ValidUrlCheck(url);
     if (!errMessage.empty())
     {
-        DBGMSG("%s\n",errMessage.c_str());
+        DBGMSG("%s\n", errMessage.c_str());
         return;
     }
     
     CleanUrl(url);
     
     DBGMSG("fetching url: %s\n", url.c_str());
-    /*
-    CURL* curl;
-    CURLcode res;
-    std::string readBuffer;
     
-    curl = curl_easy_init();
-    if (curl)
-    {
-        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallBack);
-        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-        
-        res = curl_easy_perform(curl);
-        
-        if (res != CURLE_OK)
-        {
-            DBGMSG("curl_easy_perfor() failed: %s\n", curl_easy_strerror(res));
-            return;
-        }
-        
-        DBGMSG("Response: %s\n", readBuffer.c_str());
-        
-        curl_easy_cleanup(curl);
-        
-        lastReponse = readBuffer;
+    DBGMSG("youtube-dl installed: %d\n", YoutubeDLCheck());
+    
+    if (!YoutubeDLCheck()) {
+        DBGMSG("youtube-dl not installed.");
+        return;
     }
-    */
+    
+    std::string command = COMMAND_BASE + "\"" + url + "\"";
+    DBGMSG("%s\n", command.c_str());
+    system(command.c_str());
 }
+

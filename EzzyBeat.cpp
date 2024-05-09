@@ -55,7 +55,7 @@ void EzzyBeat::CreateUI(IGraphics* pGraphics)
         {
             std::string url = pTextControl->GetStr();
             AudioFetcher* fetcher = new AudioFetcher();
-            fetcher->FetchFromUrl(url);
+            fetcher->FetchFromUrl(url, "~/Desktop");
         }
     }, "Fetch Beat"));
     

@@ -11,7 +11,7 @@ class AudioFetcher
 public:
     AudioFetcher();
     
-    void FetchFromUrl(std::string& url);
+    void FetchFromUrl(std::string& url, const std::string& outputPath);
 
 private:
     std::string lastReponse; 
