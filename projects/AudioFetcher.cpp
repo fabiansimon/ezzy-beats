@@ -7,9 +7,8 @@
 
 #include "AudioFetcher.h"
 
-
-static std::string COMMAND_BASE = "youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o \"~/Desktop/%(title)s.%(ext)s\" ";
-
+static std::string COMMAND_BASE = "youtube-dl --extract-audio --audio-format mp3 --write-thumbnail --audio-quality 0 -o ";
+static std::string PROJECT_FOLDER_NAME = "EzzyBeats";
 
 AudioFetcher::AudioFetcher()
 {
@@ -41,8 +40,39 @@ static bool YoutubeDLCheck() {
     return system("youtube-dl --version") == 0;
 }
 
+static std::string GetTempPath() 
+{
+    std::string path;
+    #ifdef _WIN32
+        char const* temp = getenv("TEMP");
+        if (temp == nullptr) temp = "C:\\Temp";  // Fallback if TEMP is not set
+        path = temp;
+    #else
+        path = "/tmp";
+    #endif
+    return path;
+}
 
-void AudioFetcher::FetchFromUrl(std::string& url, const std::string& outputPath)
+static std::string UnixTimestamp() 
+{
+    auto now = std::chrono::system_clock::now();
+    auto duration = now.time_since_epoch();
+    auto seconds = std::chrono::duration_cast<std::chrono::seconds>(duration).count();
+    return std::to_string(seconds);
+}
+
+static std::string GenerateBasePath(std::string& base) 
+{ 
+    auto tempPath = GetTempPath();
+    auto timestamp = UnixTimestamp();
+    auto fileName = "%(title)s.%(ext)s";
+    
+    base = tempPath + "/" + PROJECT_FOLDER_NAME + "/" + timestamp;
+
+    return base + "/" + fileName;
+}
+
+void AudioFetcher::FetchFromUrl(std::string& url, std::string& basePath)
 {
     auto errMessage = ValidUrlCheck(url);
     if (!errMessage.empty())
@@ -61,9 +91,25 @@ void AudioFetcher::FetchFromUrl(std::string& url, const std::string& outputPath)
         DBGMSG("youtube-dl not installed.");
         return;
     }
-    
-    std::string command = COMMAND_BASE + "\"" + url + "\"";
-    DBGMSG("%s\n", command.c_str());
-    system(command.c_str());
-}
 
+    std::string outputPath = GenerateBasePath(basePath);
+    std::string fetchCmd = COMMAND_BASE + "\"" + outputPath + "\"" + " \"" + url + "\"";
+
+    DBGMSG("%s\n", fetchCmd.c_str());
+
+    system(fetchCmd.c_str());
+
+    std::string convertCmd = "find " + basePath + " \\( -name \\*.webp -o -name \\*.jpg \\) -exec sh -c '"
+           "file=\"$1\"; "
+           "outdir=$(dirname \"$file\"); "
+           "case \"$file\" in "
+           "*.webp) "
+           "dwebp \"$file\" -o \"$outdir/thumbnail.png\" && rm \"$file\" ;; "
+           "*.jpg) "
+           "convert \"$file\" \"$outdir/thumbnail.png\" && rm \"$file\" ;; "
+           "esac' sh {} \\;";
+
+    system(convertCmd.c_str());
+
+    DBGMSG("Finished");
+}

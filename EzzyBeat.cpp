@@ -47,16 +47,31 @@ void EzzyBeat::CreateUI(IGraphics* pGraphics)
     pGraphics->AttachCornerResizer(EUIResizerMode::Scale, false);
     pGraphics->AttachPanelBackground(COLOR_WHITE);
     pGraphics->LoadFont("Roboto-Regular", ROBOTO_FN);
+    
+    IBitmap mBitmap = pGraphics->LoadBitmap("/tmp/EzzyBeats/1715337688/thumbnail.png");
+    IRECT mBitmapRect = b.GetCentredInside(100, 100);
+    
+    if (mBitmap.IsValid()) {
+        DBGMSG("%d\n", mBitmap.IsValid());
+        pGraphics->DrawBitmap(mBitmap, mBitmapRect, 1);
+    } else {
+        DBGMSG("Failed to load bitmap\n");
+    }
 
     pGraphics->AttachControl(new IEditableTextControl(b.GetFromTop(50), "Enter Youtube URL"), kTagEditText);
-    pGraphics->AttachControl(new IVButtonControl(b.GetFromTop(50).GetVShifted(100), [pGraphics](IControl* pCaller) {
+    pGraphics->AttachControl(new IVButtonControl(b.GetFromTop(50).GetVShifted(100), [pGraphics, b](IControl* pCaller) {
         ITextControl* pTextControl = dynamic_cast<ITextControl*>(pGraphics->GetControlWithTag(kTagEditText));
         if (pTextControl)
         {
+            std::string basePath;
             std::string url = pTextControl->GetStr();
             AudioFetcher* fetcher = new AudioFetcher();
-            fetcher->FetchFromUrl(url, "~/Desktop");
-        }
+            fetcher->FetchFromUrl(url, basePath);
+            delete fetcher;
+            
+            DBGMSG("basePath %s\n", basePath.c_str());
+           
+        };
     }, "Fetch Beat"));
     
 }
